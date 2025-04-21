@@ -70,7 +70,7 @@ def get_recommendations(user_id: int, db: Session = Depends(get_db)):
     user_ratings = db.query(models.user_movie_ratings).filter(
         models.user_movie_ratings.c.user_id == user_id
     ).all()
-    
+    #
     # Film özelliklerini al
     movies = db.query(models.Movie).all()
     movie_features = {
